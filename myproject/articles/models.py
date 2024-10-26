@@ -6,7 +6,7 @@ class Article(models.Model):
     description = models.TextField()
     views = models.IntegerField(default=0)
     is_published = models.BooleanField(default=True)
-    create_date = models.DateTimeField(default=timezone.now)
+    create_date = models.DateField(default=timezone.now)
 
     def __str__(self):
         return self.title
