@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Articles</title>
+</head>
+<body>
+    <h1>Article List</h1>
+    <ul>
+        {% for article in articles %}
+            <li>{{ article.title }} - {{ article.description }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_article' %}">Create New Article</a>
+</body>
+</html>
